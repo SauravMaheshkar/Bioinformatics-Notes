@@ -1,0 +1,10 @@
+.Rproj.user
+.Rproj.user/**
+.Rhistory
+.RData
+.Ruserdata
+
+_bookdown_files
+
+.DS_Store
+.DS_Store?
