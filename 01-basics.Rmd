@@ -1,0 +1,43 @@
+# Basics of R {#basics}
+
+## Why R ? 🤷🏻️
+
+R is a software environment and programming language for statistical analysis. Originally written by Robert Gentleman and Ross Ihaka from the University of Auckland. Currently it's developed by the R Development Core Team. 
+
+As highlighted in the Introduction, in the recent years R has become the *de facto* standard for many statisticians (Even this book is written in R markdown). R is free to use and open source(released under the GNU public license). It's platform independent (Windows, MacOS, and Linux distributions are supported). 
+
+R consists of a base installation and can be extended through packages to tackle a wide range of problems. There are tons of packages freely available for data analysis in R. From importing a wide range of data formats, pre-processing data, control tests, downstream integration and any other part of the pipeline. Although truth be told the learning curve for R is pretty steep 📈. R is case-sensitive and there's a lack of well-established naming conventions. R is not really memory efficient and because of the fact that it's a scripted language it's slow compared to other compiler based languages. 
+
+## Installing R 🗼
+
+R can be downloaded from [here](https://www.r-project.org). Just go through the basic setup process and come back once done. 
+
+Also install R-Studio, this makes it easy to install packages and handle source control software like git. R-Studio has the R-Console as well so don't worry about multiple windows. 
+
+## Basic Syntax
+
+The R-Console is a really simple interface. 
+
+```
+>
++
+```
+
+The `>` symbol simply means that you can give commands to the console and the `+` symbol at the start means that it's a continuation from the previous line. 
+
+To *assign* or *allocate* values to a variable you should use the `<-` operator. For example, 
+
+```
+a <- 5
+```
+
+Assigns the value 5 to the variable `a`. If you type `a` on the console, the output is going to be like:
+
+```
+> a
+[1] 5
+```
+
+Most of the times, you'll use scripts rather than typing commands in the terminal. Scripts allows us to use all the basic features of programming languages like modularity, efficiency and repeatability. 
+
+Many times, we'll need to check our current path / working directory (The current folder in which we're in). For that we can use the `getwd()` command in the console. Alternatively, we can change the working directory using the `setwd("path")` command. 

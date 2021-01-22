@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Bioinformatics Notes 🧬</title>
+  <title>Chapter 2 Basics of R | Bioinformatics Notes 🧬</title>
   <meta name="description" content="A R Bookdown 📖 Project containing my notes on Bioinformatics 🦠 and Genomics 🧬" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Bioinformatics Notes 🧬" />
+  <meta property="og:title" content="Chapter 2 Basics of R | Bioinformatics Notes 🧬" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Bioinformatics Notes 🧬" />
+  <meta name="twitter:title" content="Chapter 2 Basics of R | Bioinformatics Notes 🧬" />
   
   <meta name="twitter:description" content="A R Bookdown 📖 Project containing my notes on Bioinformatics 🦠 and Genomics 🧬" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="index.html"/>
 
-<link rel="next" href="basics.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -94,23 +94,42 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Bioinformatics Notes 🧬</h1>
+<div id="basics" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Basics of R</h1>
+<div id="why-r-️" class="section level2">
+<h2><span class="header-section-number">2.1</span> Why R ? 🤷🏻️</h2>
+<p>R is a software environment and programming language for statistical analysis. Originally written by Robert Gentleman and Ross Ihaka from the University of Auckland. Currently it’s developed by the R Development Core Team.</p>
+<p>As highlighted in the Introduction, in the recent years R has become the <em>de facto</em> standard for many statisticians (Even this book is written in R markdown). R is free to use and open source(released under the GNU public license). It’s platform independent (Windows, MacOS, and Linux distributions are supported).</p>
+<p>R consists of a base installation and can be extended through packages to tackle a wide range of problems. There are tons of packages freely available for data analysis in R. From importing a wide range of data formats, pre-processing data, control tests, downstream integration and any other part of the pipeline. Although truth be told the learning curve for R is pretty steep 📈. R is case-sensitive and there’s a lack of well-established naming conventions. R is not really memory efficient and because of the fact that it’s a scripted language it’s slow compared to other compiler based languages.</p>
 </div>
-<div id="intro" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<p>The state of technology in bioinformatics is frantically moving forward. Datasets are growing exponentially and what seemed to be huge experiments are nothing more than proof’s of concepts now.</p>
-<p>We started out with the 10k SNP chip and now we have 3 million SNP arrays. We’re talking about 30 billion nucleotide reads per sample. Such computations obviously take place on computers and there’s a huge need of efficient algorithms to make sense of such amounts of data.</p>
-<p>We have a lot of publicly available tools which aim to tackle very <strong>specific</strong> problems and are mostly not ideal for automated processes. In the recent years the statistical programming language <strong>R</strong> has become increasingly popular in genomic data analysis (some might even argue it’s the <em>de facto</em> standard). If you want a primer on R kindly visit Chapter 1 which briefly covers the language (not exhaustive)</p>
+<div id="installing-r" class="section level2">
+<h2><span class="header-section-number">2.2</span> Installing R 🗼</h2>
+<p>R can be downloaded from <a href="https://www.r-project.org">here</a>. Just go through the basic setup process and come back once done.</p>
+<p>Also install R-Studio, this makes it easy to install packages and handle source control software like git. R-Studio has the R-Console as well so don’t worry about multiple windows.</p>
+</div>
+<div id="basic-syntax" class="section level2">
+<h2><span class="header-section-number">2.3</span> Basic Syntax</h2>
+<p>The R-Console is a really simple interface.</p>
+<pre><code>&gt;
++</code></pre>
+<p>The <code>&gt;</code> symbol simply means that you can give commands to the console and the <code>+</code> symbol at the start means that it’s a continuation from the previous line.</p>
+<p>To <em>assign</em> or <em>allocate</em> values to a variable you should use the <code>&lt;-</code> operator. For example,</p>
+<pre><code>a &lt;- 5</code></pre>
+<p>Assigns the value 5 to the variable <code>a</code>. If you type <code>a</code> on the console, the output is going to be like:</p>
+<pre><code>&gt; a
+[1] 5</code></pre>
+<p>Most of the times, you’ll use scripts rather than typing commands in the terminal. Scripts allows us to use all the basic features of programming languages like modularity, efficiency and repeatability.</p>
+<p>Many times, we’ll need to check our current path / working directory (The current folder in which we’re in). For that we can use the <code>getwd()</code> command in the console. Alternatively, we can change the working directory using the <code>setwd("path")</code> command.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
