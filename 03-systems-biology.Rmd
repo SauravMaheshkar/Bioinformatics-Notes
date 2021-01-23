@@ -1,0 +1,35 @@
+# Systems Biology {#systems-biology}
+
+Systems Biology is the computational and mathematical analysis and modeling of complex biological systems.
+
+Basic Terminology:-
+
+- **Genome:** A set of chromosomes.
+
+- **Genomics:** An interdisciplinary field focusing on the structure, function, evolution, mapping and editing of genomes.
+
+- **Epigenomics:** Study of genomic modifications.
+
+- **Transcription:** Regulation of gene expression and patterns of mRNA expression.
+
+- **Omics:** An approach most often experimental that measures many individual entities that make up a system. 
+
+- **Proteomics:** Study of many proteins at a time.
+
+- **Metabolomics:** Study of many metabolities in an organism/tissue/cell.
+
+- **Dynamic Modeling:** Based on differential equations to quantitatively  estimate how pathways react to stimuli
+
+## Molecules to Pathways
+
+### cAMP Pathway
+
+cAMP stands for Cyclic Adenosine Monophosphate and was discovered by Earl Sutherland and Ted Rall. It's a **G protein coupled receptor (GPCR)** triggered signalling cascade (a series of events through which stimuli is transmitted). The $G_s$ alpha sub-unit protein is activated in a cAMP pathway. cAMP leads to the activation of an enzyme called **protein kinase A (PKA)**. PKA is called as a cAMP-dependent enzyme because it gets activated only if cAMP is present. 
+
+PKA activation leads to:-
+
+- It phosphorylates enzymes that convert glycogen into glucose.
+- It phosphorylates enzymes that promote cardiac contraction.
+- It phosphorylates enzymes that regulate gene expression.
+
+Conversion of information from outside the cell which is not recognised outside the cell, to a form that can be recognised inside the cell is known as the **Transduction process.**

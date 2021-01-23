@@ -1,5 +1,32 @@
 # Genomics 🧬{#genomics}
 
+## Basics of Genomics 🧬
+
+### Transcription
+
+- Genetic Information can be:
+    - Genomic (concerning the DNA)
+    - Transcriptomic (concerning the transcriptome RNA)
+
+Gene expression is the process by which a product such as a protein or RNA is created by a gene. Transcription is the process of producing the transcriptome from the genome.  DNA contains all the information necessary to create new macromolecules such as proteins and beyond human beings. DNA encodes the data representing the blueprint of a particular person. The process by which a DNA is transcribed into corresponding RNA proceeds through a series of steps. 
+
+1. **Initiation** → DNA macromolecule opens and an enzyme (RNA polymerase) binds with the promoter of the template strand
+2. **Elongation** → RNA polymerase processes each nucleotide on the DNA template strand to produce mRNA
+3. **Termination** → Transcription stops either when meeting a "Rho" protein factor or a loop at the end of the DNA strand
+4. **Processing** → Newly created mRNA macromolecule is processed by removing the introns and slicing the exons together so that only regions coding for proteins are maintained.
+
+During this process, mRNA nucleotides are synthesized following a very strict process:
+
+- DNA A → mRNA U
+- DNA T → mRNA A
+- DNA C → mRNA G
+- DNA G → mRNA C
+
+### Translation
+
+Translation is the process of producing a protein from a messenger RNA. Proteins are made up of amino aicds. Each amino acid is coded by three nucleotides in the mRNA. The sequence of aminoacids composing a protein is synthesized by one by one and glued together as the translation progresses, in the order dictated by the strand. This process takes place in ribosomes, organelles located in the cytoplasm where the mRNA has been led after the transcription. A ribosoome reads the mRNA strand in groups of three bases to assemble the protein. There are 20 aminoacids in humans. A certain combination of 3 bases, also called a codon, always leads to the same aminoacid. There are 64 codons, out of which 61 code for aminoacids, plus 3 stop codons. Most aminoacids are therefore coded by several different codons
+
+
 ## Genetic Markers 🖊
 
 In this section, we'll learn about genetic markers and their use in association studies.

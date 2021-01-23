@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Basics of R | Bioinformatics Notes 🧬</title>
+  <title>Chapter 4 Systems Biology | Bioinformatics Notes 🧬</title>
   <meta name="description" content="A R Bookdown 📖 Project containing my notes on Bioinformatics 🦠 and Genomics 🧬" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Basics of R | Bioinformatics Notes 🧬" />
+  <meta property="og:title" content="Chapter 4 Systems Biology | Bioinformatics Notes 🧬" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Basics of R | Bioinformatics Notes 🧬" />
+  <meta name="twitter:title" content="Chapter 4 Systems Biology | Bioinformatics Notes 🧬" />
   
   <meta name="twitter:description" content="A R Bookdown 📖 Project containing my notes on Bioinformatics 🦠 and Genomics 🧬" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="genomics.html"/>
+<link rel="prev" href="genomics.html"/>
+<link rel="next" href="statistics-in-medicine.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -137,33 +137,34 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="basics" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> Basics of R</h1>
-<div id="why-r-️" class="section level2">
-<h2><span class="header-section-number">2.1</span> Why R ? 🤷🏻️</h2>
-<p>R is a software environment and programming language for statistical analysis. Originally written by Robert Gentleman and Ross Ihaka from the University of Auckland. Currently it’s developed by the R Development Core Team.</p>
-<p>As highlighted in the Introduction, in the recent years R has become the <em>de facto</em> standard for many statisticians (Even this book is written in R markdown). R is free to use and open source(released under the GNU public license). It’s platform independent (Windows, MacOS, and Linux distributions are supported).</p>
-<p>R consists of a base installation and can be extended through packages to tackle a wide range of problems. There are tons of packages freely available for data analysis in R. From importing a wide range of data formats, pre-processing data, control tests, downstream integration and any other part of the pipeline. Although truth be told the learning curve for R is pretty steep 📈. R is case-sensitive and there’s a lack of well-established naming conventions. R is not really memory efficient and because of the fact that it’s a scripted language it’s slow compared to other compiler based languages.</p>
-</div>
-<div id="installing-r" class="section level2">
-<h2><span class="header-section-number">2.2</span> Installing R 🗼</h2>
-<p>R can be downloaded from <a href="https://www.r-project.org">here</a>. Just go through the basic setup process and come back once done.</p>
-<p>Also install R-Studio, this makes it easy to install packages and handle source control software like git. R-Studio has the R-Console as well so don’t worry about multiple windows.</p>
-</div>
-<div id="basic-syntax" class="section level2">
-<h2><span class="header-section-number">2.3</span> Basic Syntax</h2>
-<p>The R-Console is a really simple interface.</p>
-<pre><code>&gt;
-+</code></pre>
-<p>The <code>&gt;</code> symbol simply means that you can give commands to the console and the <code>+</code> symbol at the start means that it’s a continuation from the previous line.</p>
-<p>To <em>assign</em> or <em>allocate</em> values to a variable you should use the <code>&lt;-</code> operator. For example,</p>
-<pre><code>a &lt;- 5</code></pre>
-<p>Assigns the value 5 to the variable <code>a</code>. If you type <code>a</code> on the console, the output is going to be like:</p>
-<pre><code>&gt; a
-[1] 5</code></pre>
-<p>Most of the times, you’ll use scripts rather than typing commands in the terminal. Scripts allows us to use all the basic features of programming languages like modularity, efficiency and repeatability.</p>
-<p>Many times, we’ll need to check our current path / working directory (The current folder in which we’re in). For that we can use the <code>getwd()</code> command in the console. Alternatively, we can change the working directory using the <code>setwd("path")</code> command.</p>
+<div id="systems-biology" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Systems Biology</h1>
+<p>Systems Biology is the computational and mathematical analysis and modeling of complex biological systems.</p>
+<p>Basic Terminology:-</p>
+<ul>
+<li><p><strong>Genome:</strong> A set of chromosomes.</p></li>
+<li><p><strong>Genomics:</strong> An interdisciplinary field focusing on the structure, function, evolution, mapping and editing of genomes.</p></li>
+<li><p><strong>Epigenomics:</strong> Study of genomic modifications.</p></li>
+<li><p><strong>Transcription:</strong> Regulation of gene expression and patterns of mRNA expression.</p></li>
+<li><p><strong>Omics:</strong> An approach most often experimental that measures many individual entities that make up a system.</p></li>
+<li><p><strong>Proteomics:</strong> Study of many proteins at a time.</p></li>
+<li><p><strong>Metabolomics:</strong> Study of many metabolities in an organism/tissue/cell.</p></li>
+<li><p><strong>Dynamic Modeling:</strong> Based on differential equations to quantitatively estimate how pathways react to stimuli</p></li>
+</ul>
+<div id="molecules-to-pathways" class="section level2">
+<h2><span class="header-section-number">4.1</span> Molecules to Pathways</h2>
+<div id="camp-pathway" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> cAMP Pathway</h3>
+<p>cAMP stands for Cyclic Adenosine Monophosphate and was discovered by Earl Sutherland and Ted Rall. It’s a <strong>G protein coupled receptor (GPCR)</strong> triggered signalling cascade (a series of events through which stimuli is transmitted). The <span class="math inline">\(G_s\)</span> alpha sub-unit protein is activated in a cAMP pathway. cAMP leads to the activation of an enzyme called <strong>protein kinase A (PKA)</strong>. PKA is called as a cAMP-dependent enzyme because it gets activated only if cAMP is present.</p>
+<p>PKA activation leads to:-</p>
+<ul>
+<li>It phosphorylates enzymes that convert glycogen into glucose.</li>
+<li>It phosphorylates enzymes that promote cardiac contraction.</li>
+<li>It phosphorylates enzymes that regulate gene expression.</li>
+</ul>
+<p>Conversion of information from outside the cell which is not recognised outside the cell, to a form that can be recognised inside the cell is known as the <strong>Transduction process.</strong></p>
 
+</div>
 </div>
 </div>
             </section>
@@ -171,8 +172,8 @@
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="genomics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="genomics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="statistics-in-medicine.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

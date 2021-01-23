@@ -1,0 +1,229 @@
+# Statistics in Medicine{#statistics-in-medicine}
+
+## Samples vs Population
+
+If we take samples instead of the whole population we'll have to learn to contend with that fact that there will be a error in estimate because we're observing a subset rather than the whole population.
+
+For studies it is *optimal* if the sample which provides the data is representative of the population under study.
+
+### Simple Random Sampling 
+
+A scheme in which every possible subsample of size $n$ from a population is equally likely to be selected. This Sampling might accidentally develop biases that's why it isn't preferred in practice. 
+
+## Study Design 
+
+### Prospective Cohort Studies
+
+In both of the following cases subjects are classified according to their exposure status when the study starts and then followed over time to see who develops outcome(s) :-
+
+#### Randomized / Controlled Study Design
+
+- Get a representative sample from the population
+- Randomly assign to exposure groups 
+
+This study design has some benefits :-
+
+- Helps protect against self-selection biases
+- Eliminates systematic differences in characteristics
+
+#### Observational (Cohort) Studies
+
+- Get a sample from the population and then ascertain group membership
+- Get samples from different populations to be compared
+
+**ConFounders:** confounders are factors that are related both to the outcome and the exposure of interest and are a challenge to analysing such observational studies.
+
+### Case / Control Studies
+
+Subjects are chosen based on their outcome status, and the exposure(s) that occured prior to outcome are assessed.
+
+Usually done for rare outcomes because if we were to use a prospective cohort study we'd have to make a huge popultaiion to get any outcome. 
+
+## Data Types
+
+### Continuous Data
+
+**Defining characteristic:** One unit change in value means the same thing across the entire range of values
+
+### Categorical Data
+
+Where only a discrete set of values are possbile. 
+
+#### Types
+
+- **Nominal Categorical Data:** No inherent order to categories
+- **Ordinal Categorical Data:** order to categories
+
+- **Binary Data (It's a special type):** Takes only two values (Yes / No)
+
+### Time-to-Event Data
+
+- Count data collected over a period of time
+- Data which is hybrid of continuous and binary data.
+
+## Linear Regression
+
+### Basic Terminology
+
+**Basic Structure** : (Some function of an outcome) = intercept + (slope)*(x)
+
+$f(y) = \beta_o + \beta_1x_1$
+
+Here, x is a **predictor of interest**. (can be continuous , binary or categorical)
+
+LHS depends on what variable type the outcome of interest is:
+
+- For **continuous outcomes**, LHS is the mean of the outcome
+- For **Binary outcomes**, LHS is the $ln(odds)$ of the binary outcome , i.e. $ln(\frac{p}{1-p})$, where p is the probability that y = 1
+- For **time-to-event outcomes**:
+    - Where the **individual event and censoring times are not known**, y is yes/no indicator, the LHS is ln(incidence rate) and the regression type is Poisson regression
+    - Where the **individual event and censoring times are known**, the LHS is ln(hazard rate) and the regression type is Cox regression
+
+**The beauty of regression is that it allows for continuous predictors**
+
+### Simple Linear Regression with a Binary Predictor
+
+The equation in this case is:
+
+$\bar{y} = \beta_0 + \beta_1x_1$
+
+We will only be able to estimate the regression equation from a sample of data
+
+To indicate estimates we use : 
+
+$\bar{y} = \hat{\beta_0} + \hat{\beta_1}x_1$ or more frequently as   $\hat{y} = \hat{\beta_0} + \hat{\beta_1}x_1$
+
+The slope compares the mean value of y for two groups who differe by one unit of $x_1$and is **interpretable as a mean difference**
+
+**Example:** Data on anthropometric measure from a random sample of 150 Nepali children 0-12 months
+
+To find → Relation Between arm circumference(y) and sex of a child(x)
+
+Let x = 0 for male and x = 1 for female
+
+For female children : $\hat{y} = \hat{\beta_0} + \hat{\beta_1}(1)$
+
+For male children : $\hat{y} = \hat{\beta_0}$ 
+
+The slope $\hat{\beta_1}$ estimates the mean difference in arm circumference for female children compared to male children.
+
+### Simple Linear Regression with a Categorical Predictor
+
+Sometimes, regression scenarios includes predictors which are multi-categorical.
+
+**Ex**: Data were collected in 800 US academic physicians, including yearly salary. Additional information was also collected including geographical region of the US (West, Northeast, South, Midwest)
+
+To find → Do average salaries differ by geographical region ??
+
+**Approach 1 !! :** Arbitrarily give each region a numerical ****value. 
+
+Why this is Stupid: 
+
+- Coding is arbitrary
+- The value of $\hat{\beta_1}$ will depend on the scheme of coding, the results will not be equivalent for different schema
+- Coding "assumes" mean salary differences between regions is "incremental"
+
+**Approach 2 :** The preferred approach, deisgnate one region as "reference region", and make binary indicators for each of the other three.
+
+Example : Reference → West
+
+$x_1$ = 1 if Midwest , 0 otherwise
+
+$x_2$ = 1 if South, 0 otherwise
+
+$x_3$ = 1 if Northeast, 0 otherwise
+
+The Equation is : $\hat{y} = \hat{\beta_0} + \hat{\beta_1}x_1 + \hat{\beta_2}x_2 + \hat{\beta_3}x_3$ 
+
+Here, each of the 3 slopes, estimates mean salary difference between a region that has a corresponding x value of 1 and the reference region. 
+
+The intercept, is the estimated mean salary for physicians from the West.
+
+For physicians from the Midwest:  $\hat{y} = \hat{\beta_0} + \hat{\beta_1}$
+
+For physicians from the South: $\hat{y} = \hat{\beta_0} +  \hat{\beta_2}$ 
+
+For physicians from the Northeast: $\hat{y} = \hat{\beta_0} + \hat{\beta_3}$
+
+### Simple Linear Regression with a Continuous Predictor
+
+Example : Data on anthropometric measures from a random sample of 150 Nepali children 0-12 months old
+
+Question → Relationship between average arm circumference and height ??
+
+**Approach 1:** Dichotomize height at median, more than median → 1 less → 0, then use SLR
+
+Cons:
+
+- Throws away a lot of info in height data
+- Only allows for single comparison
+
+**Approach 2:** Categorize into four categories on the basis of quartile
+
+Cons:
+
+- Still throws away info
+- Requires multiple summary measures
+
+**Approach 3:** Use a computer to estimate a line where our predictor is the height (continuous)
+
+Interpretation : 
+
+- Slope is the **average change in arm circumference for a 1 unit increase in height**
+- Slope is the **mean difference in arm circumference for two groups who differ by 1 unit in height**
+
+Although the intercept has no interpretation, it's still important and necessary to fully satisfy the regression line.
+
+### Estimating the Regression Equation
+
+The main idea is to find a line that is "closest" to all the points in the given sample.
+
+For estimation we can use any error/loss function like Least Squares, categorical crossentropy, ....
+
+**Residuals:** The distances between observed y-value and the estimated mean.
+
+We need to minimize the total sum of the loss for each observations in the sample.
+
+### Measuring the Strength of a Linear Association
+
+The slope of a regression line estimates the magnitude and direction of the relationship between y and x.
+
+But doesn't impart any info about how well the line fits the data in the sample
+
+The value of regression slope depends on the units of both y and the predictors of interest.
+
+The coefficient of determination $R^2$ can also be determined by using linear regression. It varies from 0 to 1, with larger values indicating a "closer fit".
+
+It measures strength of association by comparing variability of points around the line to variability in y-values ingnoring x.
+
+## Logistic Regression 
+
+### Overview
+
+Logistic Regression is a method for relating a binary outcome to a single predictor that can be binary, categorical or continuous
+
+**Equation:** $ln(odds\,that\, y=1) = ln(\frac{p}{1-p}) = \hat\beta_0 + \hat\beta_1x_1$ where p is the probability that y = 1.
+
+For any given value of x, this equation can be used to estimate $ln(odds)$ of a binary outcome y, for a group of subjects with the same value of x
+
+#### Interpretation
+
+**Intercept:** $\hat\beta_0$ is the estimated $ln(odds\, that \, y = 1)$ when x = 0
+
+**Slope:** 
+
+- $\hat\beta_1$ is the change in that $ln(odds\, that \, y = 1)$  for a one-unit change in x
+
+OR
+
+- the difference in the $ln(odds\, that \, y = 1)$ for a one-unit difference in x. This difference in $ln(odds)$ is the natural log of an odds ratio
+
+### Estimation
+
+For logistic Regression, we use "maximum likelihood", this must be done with a computer as it just does hit-and-trial and finds the best possible values.
+
+### Estimating Risk and Risk Functions
+
+Can only be done if the study allows for risk estimates
+
+$odds = \frac{\hat p}{1 - \hat p} \implies \hat p = \frac{odds}{1+odds} \implies \hat p = \frac{e^{ln(odds)}}{1+e^{ln(odds)}}$

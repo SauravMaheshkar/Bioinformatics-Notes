@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Statistics in Medicine | Bioinformatics Notes 🧬</title>
+  <meta name="description" content="A R Bookdown 📖 Project containing my notes on Bioinformatics 🦠 and Genomics 🧬" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Statistics in Medicine | Bioinformatics Notes 🧬" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A R Bookdown 📖 Project containing my notes on Bioinformatics 🦠 and Genomics 🧬" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Statistics in Medicine | Bioinformatics Notes 🧬" />
+  
+  <meta name="twitter:description" content="A R Bookdown 📖 Project containing my notes on Bioinformatics 🦠 and Genomics 🧬" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="systems-biology.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Bioinformatics Notes 🧬</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="basics.html"><a href="basics.html"><i class="fa fa-check"></i><b>2</b> Basics of R</a><ul>
+<li class="chapter" data-level="2.1" data-path="basics.html"><a href="basics.html#why-r-️"><i class="fa fa-check"></i><b>2.1</b> Why R ? 🤷🏻️</a></li>
+<li class="chapter" data-level="2.2" data-path="basics.html"><a href="basics.html#installing-r"><i class="fa fa-check"></i><b>2.2</b> Installing R 🗼</a></li>
+<li class="chapter" data-level="2.3" data-path="basics.html"><a href="basics.html#basic-syntax"><i class="fa fa-check"></i><b>2.3</b> Basic Syntax</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="genomics.html"><a href="genomics.html"><i class="fa fa-check"></i><b>3</b> Genomics 🧬</a><ul>
+<li class="chapter" data-level="3.1" data-path="genomics.html"><a href="genomics.html#basics-of-genomics"><i class="fa fa-check"></i><b>3.1</b> Basics of Genomics 🧬</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="genomics.html"><a href="genomics.html#transcription"><i class="fa fa-check"></i><b>3.1.1</b> Transcription</a></li>
+<li class="chapter" data-level="3.1.2" data-path="genomics.html"><a href="genomics.html#translation"><i class="fa fa-check"></i><b>3.1.2</b> Translation</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="genomics.html"><a href="genomics.html#genetic-markers"><i class="fa fa-check"></i><b>3.2</b> Genetic Markers 🖊</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="genomics.html"><a href="genomics.html#what-are-markers-️"><i class="fa fa-check"></i><b>3.2.1</b> What are Markers ? 🤷🏻️</a></li>
+<li class="chapter" data-level="3.2.2" data-path="genomics.html"><a href="genomics.html#what-is-an-association-study"><i class="fa fa-check"></i><b>3.2.2</b> What is an Association Study ?</a></li>
+<li class="chapter" data-level="3.2.3" data-path="genomics.html"><a href="genomics.html#microsatellites"><i class="fa fa-check"></i><b>3.2.3</b> Microsatellites 🛰</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="systems-biology.html"><a href="systems-biology.html"><i class="fa fa-check"></i><b>4</b> Systems Biology</a><ul>
+<li class="chapter" data-level="4.1" data-path="systems-biology.html"><a href="systems-biology.html#molecules-to-pathways"><i class="fa fa-check"></i><b>4.1</b> Molecules to Pathways</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="systems-biology.html"><a href="systems-biology.html#camp-pathway"><i class="fa fa-check"></i><b>4.1.1</b> cAMP Pathway</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html"><i class="fa fa-check"></i><b>5</b> Statistics in Medicine</a><ul>
+<li class="chapter" data-level="5.1" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#samples-vs-population"><i class="fa fa-check"></i><b>5.1</b> Samples vs Population</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#simple-random-sampling"><i class="fa fa-check"></i><b>5.1.1</b> Simple Random Sampling</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#study-design"><i class="fa fa-check"></i><b>5.2</b> Study Design</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#prospective-cohort-studies"><i class="fa fa-check"></i><b>5.2.1</b> Prospective Cohort Studies</a></li>
+<li class="chapter" data-level="5.2.2" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#case-control-studies"><i class="fa fa-check"></i><b>5.2.2</b> Case / Control Studies</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#data-types"><i class="fa fa-check"></i><b>5.3</b> Data Types</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#continuous-data"><i class="fa fa-check"></i><b>5.3.1</b> Continuous Data</a></li>
+<li class="chapter" data-level="5.3.2" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#categorical-data"><i class="fa fa-check"></i><b>5.3.2</b> Categorical Data</a></li>
+<li class="chapter" data-level="5.3.3" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#time-to-event-data"><i class="fa fa-check"></i><b>5.3.3</b> Time-to-Event Data</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#linear-regression"><i class="fa fa-check"></i><b>5.4</b> Linear Regression</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#basic-terminology"><i class="fa fa-check"></i><b>5.4.1</b> Basic Terminology</a></li>
+<li class="chapter" data-level="5.4.2" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#simple-linear-regression-with-a-binary-predictor"><i class="fa fa-check"></i><b>5.4.2</b> Simple Linear Regression with a Binary Predictor</a></li>
+<li class="chapter" data-level="5.4.3" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#simple-linear-regression-with-a-categorical-predictor"><i class="fa fa-check"></i><b>5.4.3</b> Simple Linear Regression with a Categorical Predictor</a></li>
+<li class="chapter" data-level="5.4.4" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#simple-linear-regression-with-a-continuous-predictor"><i class="fa fa-check"></i><b>5.4.4</b> Simple Linear Regression with a Continuous Predictor</a></li>
+<li class="chapter" data-level="5.4.5" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#estimating-the-regression-equation"><i class="fa fa-check"></i><b>5.4.5</b> Estimating the Regression Equation</a></li>
+<li class="chapter" data-level="5.4.6" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#measuring-the-strength-of-a-linear-association"><i class="fa fa-check"></i><b>5.4.6</b> Measuring the Strength of a Linear Association</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#logistic-regression"><i class="fa fa-check"></i><b>5.5</b> Logistic Regression</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#overview"><i class="fa fa-check"></i><b>5.5.1</b> Overview</a></li>
+<li class="chapter" data-level="5.5.2" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#estimation"><i class="fa fa-check"></i><b>5.5.2</b> Estimation</a></li>
+<li class="chapter" data-level="5.5.3" data-path="statistics-in-medicine.html"><a href="statistics-in-medicine.html#estimating-risk-and-risk-functions"><i class="fa fa-check"></i><b>5.5.3</b> Estimating Risk and Risk Functions</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bioinformatics Notes 🧬</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="statistics-in-medicine" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Statistics in Medicine</h1>
+<div id="samples-vs-population" class="section level2">
+<h2><span class="header-section-number">5.1</span> Samples vs Population</h2>
+<p>If we take samples instead of the whole population we’ll have to learn to contend with that fact that there will be a error in estimate because we’re observing a subset rather than the whole population.</p>
+<p>For studies it is <em>optimal</em> if the sample which provides the data is representative of the population under study.</p>
+<div id="simple-random-sampling" class="section level3">
+<h3><span class="header-section-number">5.1.1</span> Simple Random Sampling</h3>
+<p>A scheme in which every possible subsample of size <span class="math inline">\(n\)</span> from a population is equally likely to be selected. This Sampling might accidentally develop biases that’s why it isn’t preferred in practice.</p>
+</div>
+</div>
+<div id="study-design" class="section level2">
+<h2><span class="header-section-number">5.2</span> Study Design</h2>
+<div id="prospective-cohort-studies" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> Prospective Cohort Studies</h3>
+<p>In both of the following cases subjects are classified according to their exposure status when the study starts and then followed over time to see who develops outcome(s) :-</p>
+<div id="randomized-controlled-study-design" class="section level4">
+<h4><span class="header-section-number">5.2.1.1</span> Randomized / Controlled Study Design</h4>
+<ul>
+<li>Get a representative sample from the population</li>
+<li>Randomly assign to exposure groups</li>
+</ul>
+<p>This study design has some benefits :-</p>
+<ul>
+<li>Helps protect against self-selection biases</li>
+<li>Eliminates systematic differences in characteristics</li>
+</ul>
+</div>
+<div id="observational-cohort-studies" class="section level4">
+<h4><span class="header-section-number">5.2.1.2</span> Observational (Cohort) Studies</h4>
+<ul>
+<li>Get a sample from the population and then ascertain group membership</li>
+<li>Get samples from different populations to be compared</li>
+</ul>
+<p><strong>ConFounders:</strong> confounders are factors that are related both to the outcome and the exposure of interest and are a challenge to analysing such observational studies.</p>
+</div>
+</div>
+<div id="case-control-studies" class="section level3">
+<h3><span class="header-section-number">5.2.2</span> Case / Control Studies</h3>
+<p>Subjects are chosen based on their outcome status, and the exposure(s) that occured prior to outcome are assessed.</p>
+<p>Usually done for rare outcomes because if we were to use a prospective cohort study we’d have to make a huge popultaiion to get any outcome.</p>
+</div>
+</div>
+<div id="data-types" class="section level2">
+<h2><span class="header-section-number">5.3</span> Data Types</h2>
+<div id="continuous-data" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> Continuous Data</h3>
+<p><strong>Defining characteristic:</strong> One unit change in value means the same thing across the entire range of values</p>
+</div>
+<div id="categorical-data" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> Categorical Data</h3>
+<p>Where only a discrete set of values are possbile.</p>
+<div id="types" class="section level4">
+<h4><span class="header-section-number">5.3.2.1</span> Types</h4>
+<ul>
+<li><p><strong>Nominal Categorical Data:</strong> No inherent order to categories</p></li>
+<li><p><strong>Ordinal Categorical Data:</strong> order to categories</p></li>
+<li><p><strong>Binary Data (It’s a special type):</strong> Takes only two values (Yes / No)</p></li>
+</ul>
+</div>
+</div>
+<div id="time-to-event-data" class="section level3">
+<h3><span class="header-section-number">5.3.3</span> Time-to-Event Data</h3>
+<ul>
+<li>Count data collected over a period of time</li>
+<li>Data which is hybrid of continuous and binary data.</li>
+</ul>
+</div>
+</div>
+<div id="linear-regression" class="section level2">
+<h2><span class="header-section-number">5.4</span> Linear Regression</h2>
+<div id="basic-terminology" class="section level3">
+<h3><span class="header-section-number">5.4.1</span> Basic Terminology</h3>
+<p><strong>Basic Structure</strong> : (Some function of an outcome) = intercept + (slope)*(x)</p>
+<p><span class="math inline">\(f(y) = \beta_o + \beta_1x_1\)</span></p>
+<p>Here, x is a <strong>predictor of interest</strong>. (can be continuous , binary or categorical)</p>
+<p>LHS depends on what variable type the outcome of interest is:</p>
+<ul>
+<li>For <strong>continuous outcomes</strong>, LHS is the mean of the outcome</li>
+<li>For <strong>Binary outcomes</strong>, LHS is the <span class="math inline">\(ln(odds)\)</span> of the binary outcome , i.e. <span class="math inline">\(ln(\frac{p}{1-p})\)</span>, where p is the probability that y = 1</li>
+<li>For <strong>time-to-event outcomes</strong>:
+<ul>
+<li>Where the <strong>individual event and censoring times are not known</strong>, y is yes/no indicator, the LHS is ln(incidence rate) and the regression type is Poisson regression</li>
+<li>Where the <strong>individual event and censoring times are known</strong>, the LHS is ln(hazard rate) and the regression type is Cox regression</li>
+</ul></li>
+</ul>
+<p><strong>The beauty of regression is that it allows for continuous predictors</strong></p>
+</div>
+<div id="simple-linear-regression-with-a-binary-predictor" class="section level3">
+<h3><span class="header-section-number">5.4.2</span> Simple Linear Regression with a Binary Predictor</h3>
+<p>The equation in this case is:</p>
+<p><span class="math inline">\(\bar{y} = \beta_0 + \beta_1x_1\)</span></p>
+<p>We will only be able to estimate the regression equation from a sample of data</p>
+<p>To indicate estimates we use :</p>
+<p><span class="math inline">\(\bar{y} = \hat{\beta_0} + \hat{\beta_1}x_1\)</span> or more frequently as <span class="math inline">\(\hat{y} = \hat{\beta_0} + \hat{\beta_1}x_1\)</span></p>
+<p>The slope compares the mean value of y for two groups who differe by one unit of <span class="math inline">\(x_1\)</span>and is <strong>interpretable as a mean difference</strong></p>
+<p><strong>Example:</strong> Data on anthropometric measure from a random sample of 150 Nepali children 0-12 months</p>
+<p>To find → Relation Between arm circumference(y) and sex of a child(x)</p>
+<p>Let x = 0 for male and x = 1 for female</p>
+<p>For female children : <span class="math inline">\(\hat{y} = \hat{\beta_0} + \hat{\beta_1}(1)\)</span></p>
+<p>For male children : <span class="math inline">\(\hat{y} = \hat{\beta_0}\)</span></p>
+<p>The slope <span class="math inline">\(\hat{\beta_1}\)</span> estimates the mean difference in arm circumference for female children compared to male children.</p>
+</div>
+<div id="simple-linear-regression-with-a-categorical-predictor" class="section level3">
+<h3><span class="header-section-number">5.4.3</span> Simple Linear Regression with a Categorical Predictor</h3>
+<p>Sometimes, regression scenarios includes predictors which are multi-categorical.</p>
+<p><strong>Ex</strong>: Data were collected in 800 US academic physicians, including yearly salary. Additional information was also collected including geographical region of the US (West, Northeast, South, Midwest)</p>
+<p>To find → Do average salaries differ by geographical region ??</p>
+<p><strong>Approach 1 !! :</strong> Arbitrarily give each region a numerical ****value.</p>
+<p>Why this is Stupid:</p>
+<ul>
+<li>Coding is arbitrary</li>
+<li>The value of <span class="math inline">\(\hat{\beta_1}\)</span> will depend on the scheme of coding, the results will not be equivalent for different schema</li>
+<li>Coding “assumes” mean salary differences between regions is “incremental”</li>
+</ul>
+<p><strong>Approach 2 :</strong> The preferred approach, deisgnate one region as “reference region”, and make binary indicators for each of the other three.</p>
+<p>Example : Reference → West</p>
+<p><span class="math inline">\(x_1\)</span> = 1 if Midwest , 0 otherwise</p>
+<p><span class="math inline">\(x_2\)</span> = 1 if South, 0 otherwise</p>
+<p><span class="math inline">\(x_3\)</span> = 1 if Northeast, 0 otherwise</p>
+<p>The Equation is : <span class="math inline">\(\hat{y} = \hat{\beta_0} + \hat{\beta_1}x_1 + \hat{\beta_2}x_2 + \hat{\beta_3}x_3\)</span></p>
+<p>Here, each of the 3 slopes, estimates mean salary difference between a region that has a corresponding x value of 1 and the reference region.</p>
+<p>The intercept, is the estimated mean salary for physicians from the West.</p>
+<p>For physicians from the Midwest: <span class="math inline">\(\hat{y} = \hat{\beta_0} + \hat{\beta_1}\)</span></p>
+<p>For physicians from the South: <span class="math inline">\(\hat{y} = \hat{\beta_0} + \hat{\beta_2}\)</span></p>
+<p>For physicians from the Northeast: <span class="math inline">\(\hat{y} = \hat{\beta_0} + \hat{\beta_3}\)</span></p>
+</div>
+<div id="simple-linear-regression-with-a-continuous-predictor" class="section level3">
+<h3><span class="header-section-number">5.4.4</span> Simple Linear Regression with a Continuous Predictor</h3>
+<p>Example : Data on anthropometric measures from a random sample of 150 Nepali children 0-12 months old</p>
+<p>Question → Relationship between average arm circumference and height ??</p>
+<p><strong>Approach 1:</strong> Dichotomize height at median, more than median → 1 less → 0, then use SLR</p>
+<p>Cons:</p>
+<ul>
+<li>Throws away a lot of info in height data</li>
+<li>Only allows for single comparison</li>
+</ul>
+<p><strong>Approach 2:</strong> Categorize into four categories on the basis of quartile</p>
+<p>Cons:</p>
+<ul>
+<li>Still throws away info</li>
+<li>Requires multiple summary measures</li>
+</ul>
+<p><strong>Approach 3:</strong> Use a computer to estimate a line where our predictor is the height (continuous)</p>
+<p>Interpretation :</p>
+<ul>
+<li>Slope is the <strong>average change in arm circumference for a 1 unit increase in height</strong></li>
+<li>Slope is the <strong>mean difference in arm circumference for two groups who differ by 1 unit in height</strong></li>
+</ul>
+<p>Although the intercept has no interpretation, it’s still important and necessary to fully satisfy the regression line.</p>
+</div>
+<div id="estimating-the-regression-equation" class="section level3">
+<h3><span class="header-section-number">5.4.5</span> Estimating the Regression Equation</h3>
+<p>The main idea is to find a line that is “closest” to all the points in the given sample.</p>
+<p>For estimation we can use any error/loss function like Least Squares, categorical crossentropy, ….</p>
+<p><strong>Residuals:</strong> The distances between observed y-value and the estimated mean.</p>
+<p>We need to minimize the total sum of the loss for each observations in the sample.</p>
+</div>
+<div id="measuring-the-strength-of-a-linear-association" class="section level3">
+<h3><span class="header-section-number">5.4.6</span> Measuring the Strength of a Linear Association</h3>
+<p>The slope of a regression line estimates the magnitude and direction of the relationship between y and x.</p>
+<p>But doesn’t impart any info about how well the line fits the data in the sample</p>
+<p>The value of regression slope depends on the units of both y and the predictors of interest.</p>
+<p>The coefficient of determination <span class="math inline">\(R^2\)</span> can also be determined by using linear regression. It varies from 0 to 1, with larger values indicating a “closer fit”.</p>
+<p>It measures strength of association by comparing variability of points around the line to variability in y-values ingnoring x.</p>
+</div>
+</div>
+<div id="logistic-regression" class="section level2">
+<h2><span class="header-section-number">5.5</span> Logistic Regression</h2>
+<div id="overview" class="section level3">
+<h3><span class="header-section-number">5.5.1</span> Overview</h3>
+<p>Logistic Regression is a method for relating a binary outcome to a single predictor that can be binary, categorical or continuous</p>
+<p><strong>Equation:</strong> <span class="math inline">\(ln(odds\,that\, y=1) = ln(\frac{p}{1-p}) = \hat\beta_0 + \hat\beta_1x_1\)</span> where p is the probability that y = 1.</p>
+<p>For any given value of x, this equation can be used to estimate <span class="math inline">\(ln(odds)\)</span> of a binary outcome y, for a group of subjects with the same value of x</p>
+<div id="interpretation" class="section level4">
+<h4><span class="header-section-number">5.5.1.1</span> Interpretation</h4>
+<p><strong>Intercept:</strong> <span class="math inline">\(\hat\beta_0\)</span> is the estimated <span class="math inline">\(ln(odds\, that \, y = 1)\)</span> when x = 0</p>
+<p><strong>Slope:</strong></p>
+<ul>
+<li><span class="math inline">\(\hat\beta_1\)</span> is the change in that <span class="math inline">\(ln(odds\, that \, y = 1)\)</span> for a one-unit change in x</li>
+</ul>
+<p>OR</p>
+<ul>
+<li>the difference in the <span class="math inline">\(ln(odds\, that \, y = 1)\)</span> for a one-unit difference in x. This difference in <span class="math inline">\(ln(odds)\)</span> is the natural log of an odds ratio</li>
+</ul>
+</div>
+</div>
+<div id="estimation" class="section level3">
+<h3><span class="header-section-number">5.5.2</span> Estimation</h3>
+<p>For logistic Regression, we use “maximum likelihood”, this must be done with a computer as it just does hit-and-trial and finds the best possible values.</p>
+</div>
+<div id="estimating-risk-and-risk-functions" class="section level3">
+<h3><span class="header-section-number">5.5.3</span> Estimating Risk and Risk Functions</h3>
+<p>Can only be done if the study allows for risk estimates</p>
+<p><span class="math inline">\(odds = \frac{\hat p}{1 - \hat p} \implies \hat p = \frac{odds}{1+odds} \implies \hat p = \frac{e^{ln(odds)}}{1+e^{ln(odds)}}\)</span></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="systems-biology.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["genomic_notes.pdf", "genomic_notes.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
