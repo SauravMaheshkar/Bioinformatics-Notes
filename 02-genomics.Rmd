@@ -1,0 +1,53 @@
+# Genomics 🧬{#genomics}
+
+## Genetic Markers 🖊
+
+In this section, we'll learn about genetic markers and their use in association studies.
+
+### What are Markers ? 🤷🏻️
+
+Genetic markers can be described as measurable variation (polymorphism) at the DNA level. They are chromosome regions where differences in nucleotide sequences occur between individuals of the same species. Various types of markers have been used to detect DNA variability, some of the most common ones are:
+
+* Restriction fragment length polymorphism (**RFLP**)
+* Random amplification of polymorphic DNA (**RAPD**)
+* Amplified fragment length polymorphism (**AFLP**)
+* Single stranded conformation polymorphism (**SSCP**)
+* Copy number variation (**CNV**)
+* Microsatellites
+* Single nucleotide polymorphism (**SNP**)
+
+Although, **microsatellites** and **SNP** are the most commonly used markers. 
+
+-----
+
+**NOTE:** Their is a difference between a genetic marker and DNA variation. A marker is more related to the technique employed to measure the variation whilst DNA variation is obviously independent of our ability to measure it or not. When we talk about DNA variation, we should think more in terms of:
+
+* **indels** - insertions or deletions of various lengths
+* **VNTRs** - variable number of tandem repeats (multiple copies of the same sequence of DNA, usually simple non-coding repeats)
+* **SNP** - single nucleotide polymorphisms which are a single nucleotide mutations (base mutations).
+
+-----
+
+### What is an Association Study ?
+
+The objective of an association study is to link a specific DNA region (and it's underlying variation) with a trait of interest. For example in human research, many studies have been undertaken to identify genomic regions which confer greater resistance/susceptibility to diseases such as cancer, and ultimately, within these regions, identify the variants that lead to expression of the trait. 
+
+* Knowledge of such *functional* variations improves our understanding of disease mechanisms, suggests target for novel therapeutics and can be useful for risk prediction and prevention. 
+
+* Identification of regions associated  with a trait can also help select candidate regions for gene discovery - i.e, identify the actual genes and the functional mutations that confer the trait differences. 
+
+-----
+
+**NOTE that an association does not imply causality. A marker can be associated with a trait but it is not necessarily in any way related to it.**
+
+A Chromosome is a physical structure of nucleotides connected to each other which only get broken up by recombination events. Hence, we can think of DNA sequences being transmitted from parent to offspring in *chunks*. The closer the marker is to the actual causative gene, the greater the chance that the same marker allele will be transmitted  to the offspring with the same causative allelic variant. Thus, **the marker and the gene are in linkage on the same DNA chunk, or formally *haplotype* **. A **haplotype** is a chunk of DNA which has a combination of alleles that would not be observed by chance if each one was segregating independently. This leads us to the concept of **linkage disequilibrium** (LD): a non-random association of alleles. A linkage is like the actual physical connection of nucleotides on a DNA strand. Whereas, linkage disequilibrium is a statistical test of significance, but it's not necessarily telling us anything about the actual physical proximity of what we're testing.
+
+-----
+
+### Microsatellites 🛰
+
+Microsatellites are a type of VNTR (variable number of tandem repeats). If the length of the repeating unit is *less than five base pairs*, the VNTR is referred to as a microsatellite. If the length of the repeating unit is *greater than five base pairs* the VNTR is called a minisatellite.
+
+**Variation in microsatellites is measured through the number of repeats that an individual has of the recording unit.** We can get a handle on microsatellites using PCR(*polymerase chain reaction*) methods. Basically, we amplify regions that have the repeating sequence and seperate them by virtue of their size. We can refer to these different sizes as an allele. 
+
+As discussed marker alleles are not necessarily causative of the trait. In the case of microsatellites it's almost a given that they are not causative and that they are in non-coding regions. Microsatellites can have upto 10 to 30 different alleles (SNP's generally have 2). A single microsatellite marker can be more informative than a SNP but they are generally more sparse with much lower LD between marker and the causal variant.  

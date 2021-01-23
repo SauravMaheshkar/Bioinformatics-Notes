@@ -3,3 +3,8 @@ basics
 why-r-️
 installing-r
 basic-syntax
+genomics
+genetic-markers
+what-are-markers-️
+what-is-an-association-study
+microsatellites

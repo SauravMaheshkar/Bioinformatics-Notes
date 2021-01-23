@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Genomics 🧬 | Bioinformatics Notes 🧬</title>
+  <meta name="description" content="A R Bookdown 📖 Project containing my notes on Bioinformatics 🦠 and Genomics 🧬" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Genomics 🧬 | Bioinformatics Notes 🧬" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A R Bookdown 📖 Project containing my notes on Bioinformatics 🦠 and Genomics 🧬" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Genomics 🧬 | Bioinformatics Notes 🧬" />
+  
+  <meta name="twitter:description" content="A R Bookdown 📖 Project containing my notes on Bioinformatics 🦠 and Genomics 🧬" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="basics.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Bioinformatics Notes 🧬</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="basics.html"><a href="basics.html"><i class="fa fa-check"></i><b>2</b> Basics of R</a><ul>
+<li class="chapter" data-level="2.1" data-path="basics.html"><a href="basics.html#why-r-️"><i class="fa fa-check"></i><b>2.1</b> Why R ? 🤷🏻️</a></li>
+<li class="chapter" data-level="2.2" data-path="basics.html"><a href="basics.html#installing-r"><i class="fa fa-check"></i><b>2.2</b> Installing R 🗼</a></li>
+<li class="chapter" data-level="2.3" data-path="basics.html"><a href="basics.html#basic-syntax"><i class="fa fa-check"></i><b>2.3</b> Basic Syntax</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="genomics.html"><a href="genomics.html"><i class="fa fa-check"></i><b>3</b> Genomics 🧬</a><ul>
+<li class="chapter" data-level="3.1" data-path="genomics.html"><a href="genomics.html#genetic-markers"><i class="fa fa-check"></i><b>3.1</b> Genetic Markers 🖊</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="genomics.html"><a href="genomics.html#what-are-markers-️"><i class="fa fa-check"></i><b>3.1.1</b> What are Markers ? 🤷🏻️</a></li>
+<li class="chapter" data-level="3.1.2" data-path="genomics.html"><a href="genomics.html#what-is-an-association-study"><i class="fa fa-check"></i><b>3.1.2</b> What is an Association Study ?</a></li>
+<li class="chapter" data-level="3.1.3" data-path="genomics.html"><a href="genomics.html#microsatellites"><i class="fa fa-check"></i><b>3.1.3</b> Microsatellites 🛰</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bioinformatics Notes 🧬</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="genomics" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Genomics 🧬</h1>
+<div id="genetic-markers" class="section level2">
+<h2><span class="header-section-number">3.1</span> Genetic Markers 🖊</h2>
+<p>In this section, we’ll learn about genetic markers and their use in association studies.</p>
+<div id="what-are-markers-️" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> What are Markers ? 🤷🏻️</h3>
+<p>Genetic markers can be described as measurable variation (polymorphism) at the DNA level. They are chromosome regions where differences in nucleotide sequences occur between individuals of the same species. Various types of markers have been used to detect DNA variability, some of the most common ones are:</p>
+<ul>
+<li>Restriction fragment length polymorphism (<strong>RFLP</strong>)</li>
+<li>Random amplification of polymorphic DNA (<strong>RAPD</strong>)</li>
+<li>Amplified fragment length polymorphism (<strong>AFLP</strong>)</li>
+<li>Single stranded conformation polymorphism (<strong>SSCP</strong>)</li>
+<li>Copy number variation (<strong>CNV</strong>)</li>
+<li>Microsatellites</li>
+<li>Single nucleotide polymorphism (<strong>SNP</strong>)</li>
+</ul>
+<p>Although, <strong>microsatellites</strong> and <strong>SNP</strong> are the most commonly used markers.</p>
+<hr />
+<p><strong>NOTE:</strong> Their is a difference between a genetic marker and DNA variation. A marker is more related to the technique employed to measure the variation whilst DNA variation is obviously independent of our ability to measure it or not. When we talk about DNA variation, we should think more in terms of:</p>
+<ul>
+<li><strong>indels</strong> - insertions or deletions of various lengths</li>
+<li><strong>VNTRs</strong> - variable number of tandem repeats (multiple copies of the same sequence of DNA, usually simple non-coding repeats)</li>
+<li><strong>SNP</strong> - single nucleotide polymorphisms which are a single nucleotide mutations (base mutations).</li>
+</ul>
+<hr />
+</div>
+<div id="what-is-an-association-study" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> What is an Association Study ?</h3>
+<p>The objective of an association study is to link a specific DNA region (and it’s underlying variation) with a trait of interest. For example in human research, many studies have been undertaken to identify genomic regions which confer greater resistance/susceptibility to diseases such as cancer, and ultimately, within these regions, identify the variants that lead to expression of the trait.</p>
+<ul>
+<li><p>Knowledge of such <em>functional</em> variations improves our understanding of disease mechanisms, suggests target for novel therapeutics and can be useful for risk prediction and prevention.</p></li>
+<li><p>Identification of regions associated with a trait can also help select candidate regions for gene discovery - i.e, identify the actual genes and the functional mutations that confer the trait differences.</p></li>
+</ul>
+<hr />
+<p><strong>NOTE that an association does not imply causality. A marker can be associated with a trait but it is not necessarily in any way related to it.</strong></p>
+<p>A Chromosome is a physical structure of nucleotides connected to each other which only get broken up by recombination events. Hence, we can think of DNA sequences being transmitted from parent to offspring in <em>chunks</em>. The closer the marker is to the actual causative gene, the greater the chance that the same marker allele will be transmitted to the offspring with the same causative allelic variant. Thus, <strong>the marker and the gene are in linkage on the same DNA chunk, or formally <em>haplotype</em> </strong>. A <strong>haplotype</strong> is a chunk of DNA which has a combination of alleles that would not be observed by chance if each one was segregating independently. This leads us to the concept of <strong>linkage disequilibrium</strong> (LD): a non-random association of alleles. A linkage is like the actual physical connection of nucleotides on a DNA strand. Whereas, linkage disequilibrium is a statistical test of significance, but it’s not necessarily telling us anything about the actual physical proximity of what we’re testing.</p>
+<hr />
+</div>
+<div id="microsatellites" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> Microsatellites 🛰</h3>
+<p>Microsatellites are a type of VNTR (variable number of tandem repeats). If the length of the repeating unit is <em>less than five base pairs</em>, the VNTR is referred to as a microsatellite. If the length of the repeating unit is <em>greater than five base pairs</em> the VNTR is called a minisatellite.</p>
+<p><strong>Variation in microsatellites is measured through the number of repeats that an individual has of the recording unit.</strong> We can get a handle on microsatellites using PCR(<em>polymerase chain reaction</em>) methods. Basically, we amplify regions that have the repeating sequence and seperate them by virtue of their size. We can refer to these different sizes as an allele.</p>
+<p>As discussed marker alleles are not necessarily causative of the trait. In the case of microsatellites it’s almost a given that they are not causative and that they are in non-coding regions. Microsatellites can have upto 10 to 30 different alleles (SNP’s generally have 2). A single microsatellite marker can be more informative than a SNP but they are generally more sparse with much lower LD between marker and the causal variant.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="basics.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["genomic_notes.pdf", "genomic_notes.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
