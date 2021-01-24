@@ -1,4 +1,4 @@
-# Statistics in Medicine{#statistics-in-medicine}
+# Statistics and Machine Learning in Medicine{#statistics-in-medicine}
 
 ## Samples vs Population
 
